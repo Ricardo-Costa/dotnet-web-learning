@@ -15,3 +15,8 @@ dotnet build
 ```bash
 dotnet run
 ```
+
+**Create basic gitignore file:**<br/>
+```bash
+dotnet new gitignore
+```
