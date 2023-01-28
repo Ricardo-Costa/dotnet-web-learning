@@ -18,10 +18,11 @@ public class ProductsController : ControllerBase
   [HttpGet(Name = "GetProducts")]
   public IEnumerable<Product> Get()
   {
-    return Enumerable.Range(1, 5).Select(index => new Product
+    /* TODO no construtor passando parametros nomeados */
+    return Enumerable.Range(1, 5).Select(index => new Product(description: "Notebook description by constructor...")
     {
       Name = "Notebook",
-      Description = "Main notebook product sample",
+      // Description = "Main notebook product sample", // TODO inacessível pela visibilidade alterada
       CreatedAt = DateTime.Now.AddDays(index),
     })
     .ToArray();

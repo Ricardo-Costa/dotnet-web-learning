@@ -13,7 +13,10 @@ dotnet build
 
 **Run:**<br/>
 ```bash
+# normal
 dotnet run
+# ..or in hot reload mode
+dotnet watch run
 ```
 
 **Create basic gitignore file:**<br/>

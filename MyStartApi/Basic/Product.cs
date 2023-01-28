@@ -22,7 +22,13 @@ namespace MyStartApi.Basic
     }
 
     // TODO essa é a forma mais atual de se fazer
-    public string Description { get; set; } = null!;
+    public string Description { get; private set; } = null!;
     public DateTime  CreatedAt { get; set; }
+
+    // adicionando construtor
+    public Product(string description)
+    {
+      Description = description;
+    }
   }
 }
