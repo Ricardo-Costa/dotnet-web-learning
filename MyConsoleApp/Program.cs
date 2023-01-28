@@ -22,6 +22,9 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       Console.WriteLine("Start console app...");
       Console.WriteLine("--------------------------------------------");
 
+      // inferencia
+      var testInferencia = "inferencia com string";
+
       // Value Type -- Stack
       Boolean trueOrFalse = true;
       Int16 number2 = 1;
@@ -78,6 +81,27 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
         Altura=2.10
       };
       Console.WriteLine(funcionario.Andar());
+      
+      Console.WriteLine("--------------------------------------------");
+      Console.WriteLine("Tuplas...");
+      Console.WriteLine("--------------------------------------------");
+
+      // TODO https://stackoverflow.com/questions/43476056/what-do-the-underscores-mean-in-a-numeric-literal-in-c
+      string testCompare = (50000 == 50_000).ToString();
+      Console.WriteLine($"{testCompare}");
+
+      (string, int) populacao = ("Test City", 500_000);
+      Console.WriteLine($"{populacao.Item1}: {populacao.Item2}");
+
+      var populacao2 = ("Test City", 500_000);
+      Console.WriteLine($"{populacao2.Item1}: {populacao2.Item2}");
+
+      // nomeando
+      (string cidade, int numero_populacao) populacao3 = ("Test City", 500_000);
+      Console.WriteLine($"{populacao3.cidade}: {populacao3.numero_populacao}");
+
+      // exibição comppleta
+      Console.WriteLine(populacao3);
 
     }
   }
