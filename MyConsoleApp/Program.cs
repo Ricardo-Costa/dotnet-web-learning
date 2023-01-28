@@ -1,4 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Collections.Immutable;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
+// See https://aka.ms/new-console-template for more information
 
 /*
 TODO Starting with .NET 6, the project template for new C# console apps generates the following code in the Program.cs file:
@@ -114,8 +117,32 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       int pop3;
       (city3, pop3) = populacao3;
 
+      // TODO descarte de valores
+
+      var (_, pop4) = populacao3;
+
       Console.WriteLine($"{city}: {pop}");
+
+      // TODO List and Enumerable
+      Console.WriteLine("--------------------------------------------");
+      Console.WriteLine("List and Enumerable...");
+      Console.WriteLine("--------------------------------------------");
+
+      var caderno = new List<Folha>();
+      for (int i = 1; i < 51; i++)
+      {
+        caderno.Add(new Folha() { Pagina = i });
+      }
+
+      var folhasComTexto = caderno.FindAll(x => x.temTexto());
+      Console.WriteLine(caderno.Count);
+      Console.WriteLine(caderno);
+      Console.WriteLine(folhasComTexto[1]);
+
+      // TODO VER Enumerable
+      
 
     }
   }
 }
+
