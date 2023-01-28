@@ -103,6 +103,19 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       // exibição comppleta
       Console.WriteLine(populacao3);
 
+      // TODO desconstruindo
+
+      // forma 1 
+      (string city0, int pop0) = populacao3;
+      // forma 2
+      var (city, pop) = populacao3;
+      // forma 3
+      string city3;
+      int pop3;
+      (city3, pop3) = populacao3;
+
+      Console.WriteLine($"{city}: {pop}");
+
     }
   }
 }
