@@ -25,6 +25,7 @@ dotnet new gitignore
 ```
 
 **References:**<br/>
+- https://learn.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates
 - https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/tools/dotnet-aspnet-codegenerator?view=aspnetcore-6.0
 - https://www.youtube.com/watch?v=xWTJqAp2AVw&ab_channel=CentraldotNET
 - https://andrielleazevedo.wordpress.com/2011/12/11/c-namespaces/
