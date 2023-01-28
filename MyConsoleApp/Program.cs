@@ -60,6 +60,25 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       string test = $"Name {name}";
       Console.WriteLine(test);
 
+      Console.WriteLine("--------------------------------------------");
+      Console.WriteLine("Struct and Class...");
+      Console.WriteLine("--------------------------------------------");
+
+      // TODO https://www.youtube.com/watch?v=DSkR4ucd_Vs&t=5m33s
+      Quadrado quadrado = new Quadrado(); // Value Type -- Stack
+      Pessoa pessoa = new Pessoa(nome: "Carlos") // Reference Type -- Heap -- RunTime -> em tempo de execução
+      {
+        Idade=32
+      };
+
+      Console.WriteLine(pessoa.Andar());
+
+      Funcionario funcionario = new Funcionario(matricula: 1023, nome: "Maria")
+      {
+        Altura=2.10
+      };
+      Console.WriteLine(funcionario.Andar());
+
     }
   }
 }
