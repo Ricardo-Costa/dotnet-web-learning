@@ -61,13 +61,23 @@
     // TODO Parse, tenta realizar a conversao
     int meuInteiro = int.Parse("100");
 
-
+    try
+    {
+      int meuInteiro2 = Convert.ToInt32("335");
+      Console.WriteLine(meuInteiro2);
+      meuInteiro2 = Convert.ToInt32("33.5");
+      Console.WriteLine(meuInteiro2);
+    }
+    catch (System.Exception e)
+    {
+      Console.WriteLine(e.Message);
+      // throw;
+    }
 
 
 
       var texto = "Test start app console...";
       Console.WriteLine(texto);
-      Console.WriteLine("Depois debug...");
     }
 
   }
