@@ -106,6 +106,15 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       // exibição comppleta
       Console.WriteLine(populacao3);
 
+      // Balta
+      var aluno = new Student{ Name="Carol" };
+      var tupla = new Tuple<string, int, Student>("Meu texto", 1, aluno);
+      Console.WriteLine(tupla.Item3.Name);
+      // create
+      var tupla2 = Tuple.Create<string, int, Student>("Meu texto", 1, null);
+      // inferencia
+      (string, decimal) tupla4 = ("Meu texto", 1.7M);
+
       // TODO desconstruindo
 
       // forma 1 
@@ -140,7 +149,14 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       Console.WriteLine(folhasComTexto[1]);
 
       // TODO VER Enumerable
-      
+
+
+
+
+      // TODO Array 0, 1, 2, 3, 4
+      int[] arr = { 1, 2, 3, 4, 5 };
+      var resp = arr[0];
+      Console.WriteLine(resp);
 
     }
   }
