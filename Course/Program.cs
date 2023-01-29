@@ -32,7 +32,10 @@
       quantidade = 1.7;
 
       // TODO nullable type, um tipo que pode ser nulo tambem
-      
+      int? idade = null;
+      idade = 25; 
+      idade = null; 
+
 
 
 
