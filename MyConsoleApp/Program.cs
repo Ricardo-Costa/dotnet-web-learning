@@ -114,6 +114,8 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       var tupla2 = Tuple.Create<string, int, Student>("Meu texto", 1, null);
       // inferencia
       (string, decimal) tupla4 = ("Meu texto", 1.7M);
+      (string First, decimal Second) tupla5 = ("Meu texto", 1.7M);
+      Console.WriteLine(tupla5.First);
 
       // TODO desconstruindo
 
