@@ -58,6 +58,10 @@
     int inteiro = 100;
     uint interiroSemSinal = (uint)inteiro;
 
+    // TODO Parse, tenta realizar a conversao
+    int meuInteiro = int.Parse("100");
+
+
 
 
 
