@@ -13,6 +13,8 @@ dotnet build
 
 **Run:**<br/>
 ```bash
+# get packages
+dotnet restore
 # normal
 dotnet run
 # ..or in hot reload mode
