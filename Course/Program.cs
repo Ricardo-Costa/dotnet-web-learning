@@ -60,14 +60,24 @@
     inteiro = (int)valor;
     Console.WriteLine(inteiro);
 
-    // TODO Parse, tenta realizar a conversao
-    int meuInteiro = int.Parse("100");
+    try
+    {
+      // TODO Parse, tenta realizar a conversao
+      int meuInteiro = int.Parse("100"); 
+      // meuInteiro = int.Parse(23.5f.ToString()); ERROR
+      Console.WriteLine(meuInteiro); 
+    }
+    catch (System.Exception)
+    {
+      
+      throw;
+    }
 
     try
     {
       int meuInteiro2 = Convert.ToInt32("335");
       Console.WriteLine(meuInteiro2);
-      meuInteiro2 = Convert.ToInt32("33.5");
+      meuInteiro2 = Convert.ToInt32(33.5);
       Console.WriteLine(meuInteiro2);
     }
     catch (System.Exception e)
