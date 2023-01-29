@@ -8,6 +8,9 @@ Go to created project... `MyStartApi`
 
 **Build:**<br/>
 ```bash
+# clean packages
+dotnet clean
+# build for application
 dotnet build
 ```
 
