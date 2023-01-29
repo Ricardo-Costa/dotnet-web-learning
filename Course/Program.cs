@@ -49,6 +49,16 @@
     string => ""
     */
 
+    // TODO conversao implícitas
+    float valor = 25.4F;
+    int outro = 25;
+    valor = outro; // conversão implicita => Um TIPO ACEITA(É COMPATÍVEL) com o outro.
+    // TODO conversao EXplicita
+    // obrigatoriamente temos que informar o tipo que estamos convertendo.
+    int inteiro = 100;
+    uint interiroSemSinal = (uint)inteiro;
+
+
 
 
       var texto = "Test start app console...";
