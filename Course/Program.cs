@@ -57,6 +57,8 @@
     // obrigatoriamente temos que informar o tipo que estamos convertendo.
     int inteiro = 100;
     uint interiroSemSinal = (uint)inteiro;
+    inteiro = (int)valor;
+    Console.WriteLine(inteiro);
 
     // TODO Parse, tenta realizar a conversao
     int meuInteiro = int.Parse("100");
