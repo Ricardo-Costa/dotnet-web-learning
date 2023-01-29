@@ -39,6 +39,16 @@
       idade = null; 
 
 
+    // TODO valores padrões - builtin types sempre possuem um valor padrao
+    /*
+    int => 0
+    float => 0
+    decimal => 0
+    bool => false
+    char => '\0'
+    string => ""
+    */
+
 
 
       var texto = "Test start app console...";
