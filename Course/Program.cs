@@ -25,6 +25,8 @@
       char letra = 'A';
       // TODO string
       string meuTexto = "Este é um texto";
+      // TODO string with alias
+      System.String meuTexto2 = "Este é um texto";
       
       // TODO object - quando nao sabemos qual tipo irá vir, perdemos um pouco de intelisence
       // TODO object - se comporta como um ANy do typescript
