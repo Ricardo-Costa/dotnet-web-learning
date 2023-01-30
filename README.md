@@ -33,6 +33,7 @@ dotnet new gitignore
 ```
 
 **References:**<br/>
+- https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/using-statement
 - https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/internal
 - https://learn.microsoft.com/pt-br/dotnet/standard/assembly/
 - https://learn.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates
