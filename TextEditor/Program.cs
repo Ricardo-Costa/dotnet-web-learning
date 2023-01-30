@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Net.Mime;
+using System;
 using System.IO;
 
 namespace Stopwatch
@@ -33,6 +34,25 @@ namespace Stopwatch
 
     static void Open()
     {
+      Console.Clear();
+      Console.WriteLine("Qual o caminho do arquivo?");
+      Console.WriteLine("Exemplo: outputfile/text.txt");
+      var path = Console.ReadLine();
+
+      // TODO sempre lembrar de fechar arquivo após abrilo para escrita
+      // TODO using trata objetos em abertura e fechamento
+      // https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/using-statement
+      using(var file = new StreamReader(path))
+      {
+        string text = file.ReadToEnd();
+        Console.WriteLine("O conteúdo do arquivo é:");
+        Console.WriteLine("-----------------------------------");
+        Console.WriteLine(text);
+      }
+      
+      Console.WriteLine("");
+      Console.ReadLine();
+      Menu();
     }
 
     static void Save(string text)
