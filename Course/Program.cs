@@ -90,6 +90,17 @@
 
       var texto = "Test start app console...";
       Console.WriteLine(texto);
+
+      // TODO structs
+      // var product = new Product();
+      var product = new Product() {
+        Id = 1,
+        Title = "Feijão",
+        Price = 5.50
+      };
+      // product.Id = 1;
+      // product.Price = 5;
+      Console.WriteLine(product.ToString());
     }
 
     static string TesteMethod(string name, int idade = 29) // idade opcional, tem valor default
@@ -97,5 +108,25 @@
       return $"Nome: {name} tem idade default {idade}";
     }
 
+  }
+
+  // Structs
+  struct Product
+  {
+    public int Id;
+    public string Title;
+    public double Price;
+
+    public Product(int id, string title, double price)
+    {
+      Id = id;
+      Title = title;
+      Price = price;
+    }
+
+    public double PriceInDolar(double dolar)
+    {
+      return Price * dolar;
+    }
   }
 }
