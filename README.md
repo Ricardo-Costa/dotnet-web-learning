@@ -2,7 +2,10 @@
 
 **Create Project:**<br/>
 ```bash
+# create new project
 dotnet new webapi -n MyStartApi
+# ...or with output flag
+dotnet new console -o Calculator
 ```
 Go to created project... `MyStartApi`
 
