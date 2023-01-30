@@ -95,8 +95,9 @@
       // var product = new Product();
       var product = new Product() {
         Id = 1,
-        Title = "Feijão",
-        Price = 5.50
+        Title = "Notebook",
+        Price = 3500,
+        ProductType = EProductType.Eletronic
       };
       // product.Id = 1;
       // product.Price = 5;
@@ -110,18 +111,28 @@
 
   }
 
+  // TODO enumeradores
+  enum EProductType
+  {
+    Eletronic = 1,
+    Cosmetic = 2,
+    Service = 3
+  }
+
   // Structs
   struct Product
   {
     public int Id;
     public string Title;
     public double Price;
+    public EProductType ProductType;
 
-    public Product(int id, string title, double price)
+    public Product(int id, string title, double price, EProductType productType)
     {
       Id = id;
       Title = title;
       Price = price;
+      ProductType = productType;
     }
 
     public double PriceInDolar(double dolar)
