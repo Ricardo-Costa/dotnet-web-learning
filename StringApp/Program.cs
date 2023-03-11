@@ -79,6 +79,50 @@ namespace StringApp
       Console.WriteLine(texto.IndexOf("é"));
       Console.WriteLine(texto.LastIndexOf("m"));
 
+      Console.WriteLine("------------------- [ CONVERTENDO Strings ] ------------------------");
+
+      texto = "Este é um texto simples.";
+      Console.WriteLine(texto.ToUpper());
+      Console.WriteLine(texto.ToLower());
+      Console.WriteLine(texto.Insert(5, "AQUI"));
+      Console.WriteLine(texto.Remove(5, 5));
+      Console.WriteLine(texto.Length);
+
+      Console.WriteLine("------------------- [ REPLACE Strings ] ------------------------");
+
+      texto = "Este é um texto simples.";
+      Console.WriteLine(texto.Replace("Este", "isto")); // substitue todas as ocorrencias da palavra/texto
+
+      Console.WriteLine("------------------- [ DIVIDINDO Strings ] ------------------------");
+
+      var divisao = texto.Split(" ");
+      Console.WriteLine(divisao[0]);
+      Console.WriteLine(divisao[1]);
+      Console.WriteLine(divisao[2]);
+
+      Console.WriteLine("------------------- [ PARTE Strings ] ------------------------");
+
+      var parte = texto.Substring(5, 5);
+      Console.WriteLine(parte);
+      Console.WriteLine(texto);
+      Console.WriteLine(texto.LastIndexOf("x"));
+
+      parte = texto.Substring(5, texto.LastIndexOf("x") -5);
+      Console.WriteLine(parte);
+
+      Console.WriteLine("------------------- [ TRIM - remover espaços começo e fim - Strings ] ------------------------");
+
+      Console.WriteLine($@"
+      
+      {texto}
+      
+      ");
+
+      Console.WriteLine($@"
+      
+      {texto}
+      
+      ".Trim());
     }
   }
 }
