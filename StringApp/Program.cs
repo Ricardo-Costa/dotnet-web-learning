@@ -45,6 +45,39 @@ namespace StringApp
       texto = "Test \n Quebrou?";
       Console.WriteLine(texto);
 
+      Console.WriteLine("------------------- [ Comparação de Strings ] ------------------------");
+
+      texto = "Testando";
+      Console.WriteLine(texto.CompareTo("Testando"));
+      Console.WriteLine(texto.CompareTo("testando"));
+
+      texto = "Testando texto xyz";
+      Console.WriteLine(texto.Contains("xyz"));
+      Console.WriteLine(texto.Contains("Xyz")); // default casesensitive
+      Console.WriteLine(texto.Contains("Xyz", StringComparison.OrdinalIgnoreCase));
+
+      Console.WriteLine("------------------- [ Comparação de START e END de Strings ] ------------------------");
+
+      texto = "Este é um texto simples.";
+      Console.WriteLine(texto.StartsWith("Este"));
+      Console.WriteLine(texto.StartsWith("este"));
+      Console.WriteLine(texto.StartsWith("este", StringComparison.OrdinalIgnoreCase));
+      Console.WriteLine(texto.EndsWith("Simples."));
+      Console.WriteLine(texto.EndsWith("simples."));
+      Console.WriteLine(texto.EndsWith("Simples.", StringComparison.OrdinalIgnoreCase));
+
+      Console.WriteLine("------------------- [ Comparação de IGUAL de Strings ] ------------------------");
+
+      texto = "Este é um texto simples.";
+      Console.WriteLine(texto.Equals("Este é um texto simples."));
+      Console.WriteLine(texto.Equals("este é um texto simples."));
+      Console.WriteLine(texto.Equals("este é um texto simples.", StringComparison.OrdinalIgnoreCase));
+
+      Console.WriteLine("------------------- [ Comparação de INDEX de Strings ] ------------------------");
+
+      texto = "Este é um texto simples.";
+      Console.WriteLine(texto.IndexOf("é"));
+      Console.WriteLine(texto.LastIndexOf("m"));
 
     }
   }
