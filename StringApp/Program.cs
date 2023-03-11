@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Text;
+using System;
 
 namespace StringApp
 {
@@ -123,6 +124,15 @@ namespace StringApp
       {texto}
       
       ".Trim());
+
+      Console.WriteLine("------------------- [ Builder - Strings ] ------------------------");
+
+      var textoBuilder = new StringBuilder();
+      textoBuilder.Append("Este é um texto simples, linha 1.");
+      textoBuilder.Append("Este é um texto simples, linha 2.\n");
+      textoBuilder.Append("Este é um texto simples, linha 3.");
+
+      Console.WriteLine(textoBuilder);
     }
   }
 }
