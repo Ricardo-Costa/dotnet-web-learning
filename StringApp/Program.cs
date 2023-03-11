@@ -16,6 +16,36 @@ namespace StringApp
 
       id = new Guid();
       Console.WriteLine(id);
+
+      Console.WriteLine("------------------- [ Interpolação de Strings ] ------------------------");
+
+      var price = 10.2;
+      var texto = "Opreço do produto é " + price + " apenas na promoção.";
+      Console.WriteLine(texto);
+
+      texto = string.Format("O preço do produto é {0} apenas na promoção.", price);
+      Console.WriteLine(texto);
+
+      texto = $"O preço do produto é {price} apenas na promoção.";
+      Console.WriteLine(texto);
+
+      texto = @"
+      O preço do produto é {price} apenas na promoção.
+      ";
+      Console.WriteLine(texto);
+
+      texto = $@"
+      O preço do produto é {price} apenas na promoção.
+      ";
+      Console.WriteLine(texto);
+
+      texto = @"Test \n Quebrou?";
+      Console.WriteLine(texto);
+
+      texto = "Test \n Quebrou?";
+      Console.WriteLine(texto);
+
+
     }
   }
 }
