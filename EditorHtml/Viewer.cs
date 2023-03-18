@@ -13,11 +13,38 @@ namespace EditorHtml
       Console.Clear();
       Console.WriteLine("[Modo Visualização]");
       Console.WriteLine("---------------");
+      Replace(text);
+      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("Pressione qualquer tecla para voltar ao menu");
+      Console.ReadKey();
+      Menu.Show();
     }
 
     public static void Replace(string text)
     {
-      // var string = new Regex("<strong><strong>");
+      var strong = new Regex(@"<\s*strong[^>]*>(.*?)<\s*strong>");
+      var words = text.Split(' ');
+
+      for(var i = 0; i < words.Length; i++)
+      {
+        if (strong.IsMatch(words[i]))
+        {
+          Console.ForegroundColor = ConsoleColor.DarkBlue;
+          Console.Write(
+            words[i].Substring(
+              words[i].IndexOf('>') +1,
+              (words[i].LastIndexOf('<') -1) -
+              (words[i].IndexOf('>'))
+            )
+          );
+          Console.Write(" ");
+        } else {
+          Console.ForegroundColor = ConsoleColor.Black;
+          Console.Write(words[i]);
+          Console.Write(" ");
+        }
+      }
+      Console.WriteLine(strong);
     }
   }
 }
