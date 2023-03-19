@@ -78,6 +78,47 @@ namespace MyAppDate
       Console.WriteLine(DateTime.Now.ToString("D", pt));
       Console.WriteLine(DateTime.Now.ToString("D", atual));
 
+      Console.WriteLine("------------------- [ Data - Timezone ] -------------------------");
+      pt = new CultureInfo("pt-BR");
+      var dataUTC = DateTime.UtcNow; // TODO UTC
+
+      Console.WriteLine(DateTime.Now.ToString("r", pt));
+      Console.WriteLine(dataUTC.ToString("r", pt));
+      Console.WriteLine(dataUTC.ToLocalTime().ToString("r", pt));
+
+      var timezoneFortaleza = TimeZoneInfo.FindSystemTimeZoneById("America/Fortaleza");
+      Console.WriteLine(timezoneFortaleza);
+
+      var horaFortaleza = TimeZoneInfo.ConvertTimeFromUtc(dataUTC, timezoneFortaleza);
+      Console.WriteLine(horaFortaleza);
+
+      // foreach (var timezone in TimeZoneInfo.GetSystemTimeZones())
+      // {
+      //   Console.WriteLine(timezone.Id);
+      //   Console.WriteLine(timezone);
+      //   Console.WriteLine(TimeZoneInfo.ConvertTimeFromUtc(dataUTC, timezone));
+      //   Console.WriteLine("-----------------------");
+      // }
+
+      Console.WriteLine("------------------- [ Data - TimeSpan ] -------------------------");
+
+      // frações de tempo
+      var timeSpan = new TimeSpan();
+      Console.WriteLine(timeSpan);
+      
+      var timeSpanNanosegundos = new TimeSpan(1);
+      Console.WriteLine(timeSpanNanosegundos);
+      
+      var timeSpanHoraMinSeg = new TimeSpan(5, 12, 1);
+      Console.WriteLine(timeSpanHoraMinSeg);
+      
+      var timeSpanDiaHoraMinSeg = new TimeSpan(2, 5, 12, 1); // etc...
+      Console.WriteLine(timeSpanDiaHoraMinSeg);
+
+      /// usado normalmente para calculos precisos com unidades de tempo
+      Console.WriteLine(timeSpanDiaHoraMinSeg - timeSpanHoraMinSeg);
+      Console.WriteLine(timeSpanDiaHoraMinSeg.Days);
+      Console.WriteLine(timeSpanDiaHoraMinSeg.Add(new TimeSpan(12, 0, 0, 3)));
     }
   }
 }
