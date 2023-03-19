@@ -36,7 +36,34 @@ namespace MyAppDate
       formatedDate = String.Format("{0:M}", data);
       Console.WriteLine(formatedDate);
       formatedDate = String.Format("{0:yyyy-MM-dd hh:mm:ss ff z}", data);
+      formatedDate = String.Format("{0:r}", data); // obj JS ?
       Console.WriteLine(formatedDate);
+      formatedDate = String.Format("{0:s}", data); // JSON date
+      Console.WriteLine(formatedDate);
+      formatedDate = String.Format("{0:u}", data); // JSON date
+      Console.WriteLine(formatedDate);
+
+      Console.WriteLine("------------------- [ Data - Manipulações ] -------------------------");
+      data = DateTime.Now;
+      data.AddDays(10); // nao modifica a data, apenas retorna a nova instancia com o valor
+      Console.WriteLine(data.AddDays(10));
+      Console.WriteLine((data.AddDays(10)).AddDays(-10));
+
+      Console.WriteLine("------------------- [ Data - Comparação ] -------------------------");
+      DateTime? data2 = null; // TODO DateTime? -> uma data que pode ser nula
+      data2 = DateTime.Now;
+
+      if (data == DateTime.Now) {
+        Console.WriteLine("É igual");
+      }
+
+      if (data.Date == DateTime.Now.Date) { // compara so dates
+        Console.WriteLine("DATE É igual");
+      }
+
+      if (data <= DateTime.Now) { // compara so dates
+        Console.WriteLine("DATE menor igual");
+      }
 
     }
   }
