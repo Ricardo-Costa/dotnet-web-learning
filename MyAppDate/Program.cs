@@ -119,6 +119,18 @@ namespace MyAppDate
       Console.WriteLine(timeSpanDiaHoraMinSeg - timeSpanHoraMinSeg);
       Console.WriteLine(timeSpanDiaHoraMinSeg.Days);
       Console.WriteLine(timeSpanDiaHoraMinSeg.Add(new TimeSpan(12, 0, 0, 3)));
+
+
+      Console.WriteLine("------------------- [ Data - Funções uteis ] -------------------------");
+      Console.WriteLine(DateTime.DaysInMonth(2020, 2));
+      
+      if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday) {
+        Console.WriteLine("É final de semana");
+      } else {
+        Console.WriteLine("Não é final de semana");
+      }
+
+      Console.WriteLine(DateTime.Now.IsDaylightSavingTime()); // TODO se é horário de verão
     }
   }
 }
