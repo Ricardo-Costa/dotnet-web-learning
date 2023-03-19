@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Globalization;
+using System;
 
 namespace MyAppDate
 {
@@ -64,6 +65,18 @@ namespace MyAppDate
       if (data <= DateTime.Now) { // compara so dates
         Console.WriteLine("DATE menor igual");
       }
+
+      Console.WriteLine("------------------- [ Data - Localização e Globalização ] -------------------------");
+      var pt = new CultureInfo("pt-BR");
+      var atual = CultureInfo.CurrentCulture; // pegar a atual do sistema
+
+      // var pt = new System.Globalization.CultureInfo("pt-BR");
+      data2 = DateTime.Now;
+
+      Console.WriteLine(DateTime.Now.ToString("d"));
+      Console.WriteLine(string.Format("{0:D}", DateTime.Now));
+      Console.WriteLine(DateTime.Now.ToString("D", pt));
+      Console.WriteLine(DateTime.Now.ToString("D", atual));
 
     }
   }
