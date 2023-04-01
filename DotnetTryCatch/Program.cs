@@ -72,6 +72,22 @@ namespace DotnetTryCatch
         Console.WriteLine(ex.Message);
         // throw;
       }
+
+      Console.WriteLine("-----------------[ Finally ]-------------------");
+
+      try
+      {
+        Cadastrar("teste-minha-exception");
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine(ex.Message);
+        // throw;
+      }
+      finally
+      {
+        Console.WriteLine("Treat finally..........");
+      }
     }
 
     private static void Cadastrar(string texto)
