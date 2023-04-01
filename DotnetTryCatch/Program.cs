@@ -48,6 +48,26 @@ namespace DotnetTryCatch
         Console.WriteLine(ex.Message);
         // throw;
       }
+
+      Console.WriteLine("-----------------[ Lançamento de Exceptions ]-------------------");
+
+      try
+      {
+        Cadastrar("");
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine(ex.Message);
+        // throw;
+      }
+    }
+
+    private static void Cadastrar(string texto)
+    {
+      if(string.IsNullOrEmpty(texto))
+        throw new ArgumentNullException("O texto não pode ser nulo ou vazio.");
+      
+      throw new Exception("O texto não pode ser nulo ou vazio.");
     }
   }
 }
