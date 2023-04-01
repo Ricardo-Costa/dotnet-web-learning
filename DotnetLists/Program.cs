@@ -33,11 +33,29 @@ namespace DotnetLists
         Console.WriteLine(meuArray2[index]);
       }
 
+      foreach (var item in meuArray2) {
+        Console.WriteLine(item);
+      }
+
+      var funcionarios = new Funcionario[1];
+      funcionarios[0] = new Funcionario() { Id = 123, Nome = "Tester" };
+
+      foreach (var funcionario in funcionarios) {
+        Console.WriteLine(funcionario.Id);
+        Console.WriteLine(funcionario.Nome);
+      }
+
     }
   }
 
   struct Teste
   {
     public int Id { get; set; }
+  }
+
+  public struct Funcionario
+  {
+    public int Id { get; set; }
+    public string Nome { get; set; }
   }
 }
