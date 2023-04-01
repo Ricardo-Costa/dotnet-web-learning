@@ -60,14 +60,40 @@ namespace DotnetTryCatch
         Console.WriteLine(ex.Message);
         // throw;
       }
+
+      Console.WriteLine("-----------------[ Custom Exceptions ]-------------------");
+
+      try
+      {
+        Cadastrar("teste-minha-exception");
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine(ex.Message);
+        // throw;
+      }
     }
 
     private static void Cadastrar(string texto)
     {
+      if(texto == "teste-minha-exception")
+        throw new MinhaException("Lanço minha custom exception aqui.", DateTime.Now);
+
+
       if(string.IsNullOrEmpty(texto))
         throw new ArgumentNullException("O texto não pode ser nulo ou vazio.");
       
       throw new Exception("O texto não pode ser nulo ou vazio.");
+    }
+  }
+
+  public class MinhaException : Exception
+  {
+    public DateTime QuandoAconteceu { get; set; }
+
+    public MinhaException(string message, DateTime date): base(message)
+    {
+      QuandoAconteceu = date;
     }
   }
 }
