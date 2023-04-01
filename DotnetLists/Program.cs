@@ -21,6 +21,18 @@ namespace DotnetLists
       Console.WriteLine("-------------------[Array varios tipos + structures]----------------------");
       var meuArray3 = new Teste[1]{ new Teste() }; // array de 5 posições
       Console.WriteLine(meuArray3[0].Id);
+
+      Console.WriteLine("-------------------[Array ference type]----------------------");
+      // var meuArray4 = meuArray3.CopyTo(); /// deve copiar via method para mudar referencia
+
+      Console.WriteLine(meuArray3[0].Id);
+
+      Console.WriteLine("-------------------[Array iterando/percorrendo]----------------------");
+
+      for (var index = 0; index < meuArray2.Length; index++) {
+        Console.WriteLine(meuArray2[index]);
+      }
+
     }
   }
 
