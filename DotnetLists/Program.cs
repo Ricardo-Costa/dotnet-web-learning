@@ -24,6 +24,16 @@ namespace DotnetLists
 
       Console.WriteLine("-------------------[Array ference type]----------------------");
       // var meuArray4 = meuArray3.CopyTo(); /// deve copiar via method para mudar referencia
+      var arrayA = new int[1] { 21 };
+      var arrayB = arrayA;
+      arrayA[0] = 22;
+      Console.WriteLine(arrayB[0]);
+
+      // copia correta
+      arrayB[0] = arrayA[0];
+      // OU....
+      arrayA.CopyTo(arrayB, 0);
+
 
       Console.WriteLine(meuArray3[0].Id);
 
