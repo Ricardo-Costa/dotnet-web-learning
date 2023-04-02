@@ -1,6 +1,6 @@
 namespace MyConsoleApp
 {
-    public class Pessoa
+    public abstract class Pessoa
     {
         public string Nome;
         public string Sobrenome;

@@ -72,12 +72,12 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
 
       // TODO https://www.youtube.com/watch?v=DSkR4ucd_Vs&t=5m33s
       Quadrado quadrado = new Quadrado(); // Value Type -- Stack
-      Pessoa pessoa = new Pessoa(nome: "Carlos") // Reference Type -- Heap -- RunTime -> em tempo de execução
-      {
-        Idade=32
-      };
+      // Pessoa pessoa = new Pessoa(nome: "Carlos") // Reference Type -- Heap -- RunTime -> em tempo de execução
+      // {
+      //   Idade=32
+      // };
 
-      Console.WriteLine(pessoa.Andar());
+      // Console.WriteLine(pessoa.Andar());
 
       Funcionario funcionario = new Funcionario(matricula: 1023, nome: "Maria")
       {
