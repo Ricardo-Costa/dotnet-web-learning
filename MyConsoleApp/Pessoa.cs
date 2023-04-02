@@ -11,7 +11,7 @@ namespace MyConsoleApp
             Nome = nome;
         }
 
-        public string Andar()
+        public virtual string Andar() // virutal permitirar ter sobrecarga de método
         {
             return $"{Nome} ou {this.Nome} está andando...";
         }

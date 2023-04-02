@@ -12,5 +12,10 @@ namespace MyConsoleApp
         Matricula = matricula;
         // Nome = nome;
       }
+
+      public override string Andar()
+      {
+        return $"Funcionario anda rápido";
+      }
     }
 }
