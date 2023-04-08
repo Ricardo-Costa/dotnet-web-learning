@@ -42,3 +42,4 @@ dotnet new gitignore
 - https://www.youtube.com/watch?v=xWTJqAp2AVw&ab_channel=CentraldotNET
 - https://andrielleazevedo.wordpress.com/2011/12/11/c-namespaces/
 - https://www.youtube.com/watch?v=6s4lomHKl-Q&ab_channel=MarcoDiniz
+- https://www.youtube.com/watch?v=4qG9Nh_wD5Y&ab_channel=Andr%C3%A9Secco

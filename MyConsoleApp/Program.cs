@@ -134,6 +134,15 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
 
       Console.WriteLine($"{city}: {pop}");
 
+      // TODO chamando método
+
+      var retornaTupla = RetornaTupla();
+      Console.WriteLine(retornaTupla.idade);
+      Console.WriteLine(retornaTupla.nome);
+      var (_idade, _nome) = RetornaTupla();
+      Console.WriteLine(_idade);
+      Console.WriteLine(_nome);
+
       // TODO List and Enumerable
       Console.WriteLine("--------------------------------------------");
       Console.WriteLine("List and Enumerable...");
@@ -160,6 +169,14 @@ namespace MyConsoleApp // TODO Note: actual namespace depends on the project nam
       var resp = arr[0];
       Console.WriteLine(resp);
 
+    }
+
+    private static (int idade, string nome) RetornaTupla()
+    {
+      var idade = 28;
+      var nome = "Fulano";
+
+      return (idade, nome);
     }
   }
 }
