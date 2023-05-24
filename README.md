@@ -43,3 +43,4 @@ dotnet new gitignore
 - https://andrielleazevedo.wordpress.com/2011/12/11/c-namespaces/
 - https://www.youtube.com/watch?v=6s4lomHKl-Q&ab_channel=MarcoDiniz
 - https://www.youtube.com/watch?v=4qG9Nh_wD5Y&ab_channel=Andr%C3%A9Secco
+- https://stackoverflow.com/questions/6637679/reflection-get-attribute-name-and-value-on-property
