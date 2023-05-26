@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace DotnetLists
 {
@@ -55,6 +57,41 @@ namespace DotnetLists
         Console.WriteLine(funcionario.Nome);
       }
 
+      Console.WriteLine("------------------------------------------------");
+
+      System.Collections.Generic.IList<Departamento> departamentos = new System.Collections.Generic.List<Departamento>();
+      System.Collections.Generic.IList<Funcionario2> funcionarios2 = new System.Collections.Generic.List<Funcionario2>();
+      funcionarios2.Add(
+        new Funcionario2()
+        {
+          Id = 5,
+          Nome = "Ricardo 22"
+        }
+      );
+      funcionarios2.Add(
+        new Funcionario2()
+        {
+          Id = 5,
+          Nome = "Ricardo 2"
+        }
+      );
+      departamentos.Add(
+        new Departamento()
+        {
+          funcionarios = funcionarios2
+        }
+      );
+
+      for (int j = 0; j < departamentos.Count; j++)
+      {
+          departamentos[j].Id = j + 100;
+
+          for (int i = 0; i < departamentos[j].funcionarios.Count; i++)
+              departamentos[j].funcionarios[i].Nome = $"Ricardo novo nome {i}";
+      }
+
+      Console.WriteLine(JsonConvert.SerializeObject(departamentos));
+
     }
   }
 
@@ -67,5 +104,17 @@ namespace DotnetLists
   {
     public int Id { get; set; }
     public string Nome { get; set; }
+  }
+
+  public class Funcionario2
+  {
+    public int Id { get; set; }
+    public string Nome { get; set; }
+  }
+
+  public class Departamento
+  {
+    public int Id { get; set; }
+    public IList<Funcionario2> funcionarios { get; set; }
   }
 }
